@@ -1,0 +1,406 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #8fe9ff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #3d3d3d;
+    color: white;
+    height: 25px;
+}
+
+.navbar img {
+    height: 100px;
+    width: 100px;
+}
+
+.navbar .logo h1 {
+    margin: 0;
+}
+
+/* Dashboard */
+.dashboard {
+    display: flex;
+    flex: row;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Whiteboard Section */
+.whiteboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    width: 1700px;
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 1225px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    color: rgb(0, 0, 0);
+}
+
+.toolbar h1 {
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+/* Feed */
+.feed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 equal-width columns */
+    gap: 0px;
+    justify-items: center; /* Center content inside each grid item */
+    align-items: center;
+    height: 825px;
+    width: 1225px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 0 atuo; /* Center the grid container inside its parent */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+
+.tool {
+    height: 180px;
+   width: 250px;
+   background-color: #ddd; /* Light grey for placeholder */
+   border-radius: 5px;
+}
+
+/* Library Section */
+.library {
+    height: 900px;
+    width: 900px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bookshelf {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Create 2 columns */
+    justify-items: center; /* Center the shelves horizontally */
+    align-items: center; /* Center the shelves vertically */
+    height: 900px;
+    width: 600px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+.shelf {
+    width: 575px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border-radius: 5px;
+    background-color: #e1e1e1; /* Dark gray for the shelves */
+    display: flex;
+    justify-content: space-evenly; /* Distribute space evenly between placeholders */
+    align-items: center; /* Vertically center placeholders within the shelf */
+}
+
+.placeholder {
+    width: 100px;
+    height: 190px;
+    border-radius: 5px;
+    background-color: #a3a3a3;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+/* Optional: Adding a soft glowing hover effect */
+.placeholder:hover .book {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Glow effect on hover */
+    transition: all 0.3s ease-in-out;
+    background-color: #44444400;
+}
+
+/* Hover effect for placeholders */
+.placeholder:hover {
+    transform: scale(1.05); /* Slightly enlarge the placeholder */
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    background-color: #ffffff8f;
+}
+
+/* Hover effect for books */
+.book:hover {
+    transform: scale(1); /* Slightly enlarge the placeholder */
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    cursor: pointer; /* Change the cursor to pointer */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    height: 80%;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.subject-container {
+    display: flex;
+    justify-content: center;
+}
+
+.subject-list {
+    width: 60%;
+}
+
+.subject-list ul {
+    list-style: none;
+    padding: 50px;
+}
+
+.subject-list li {
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.subject-list li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Book Styles */
+.book {
+    width: 100px;
+    height: 190px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    overflow: hidden;
+}
+
+/* Dark line on both sides of the book */
+.book::before,
+.book::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px; /* Spine width */
+}
+
+.book .spine-before {
+    left: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+}
+
+.book .spine-after {
+    right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+}
+
+.book::before {
+    left: 0;
+}
+
+.book::after {
+    right: 0;
+}
+
+.book span {
+    position: relative;
+    z-index: 20; /* Ensure the text is on top */
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.6); /* Background behind text for readability */
+    border-radius: 5px;
+    color: #fff;
+}
+
+.close-button {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.book:hover .close-button {
+    display: block; /* Display close button on hover */
+}
+
+/* Color Option Styles */
+
+.color-set {
+    margin-bottom: 20px;
+}
+
+.color-set h3 {
+    margin-bottom: 10px;
+}
+
+.color-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.color-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+}
+
+.primary-colors .color-row,
+.secondary-colors .color-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.color-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* Context Menu for Books */
+.context-menu {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+}
+
+.context-menu:hover {
+    background-color: #f0f0f0;
+}
+
+/* Animation for Modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

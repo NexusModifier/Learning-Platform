@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/25a765b152.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+
+</head>
+
+<body>
+
+    <main>
+        <div class="navbar">
+        </div>
+        <div class="dashboard">
+
+            <section class="whiteboard">
+
+                <div class="toolbar">
+                    <i class="fa-solid fa-user"> <h1>Profile</h1></i>
+                    <i class="fa-solid fa-book"> <h1>Reader</h1></i>
+                    <i class="fa-solid fa-bars"><h1>Board</h1></i>
+                    <i class="fa-solid fa-wrench"><h1>Settings</h1></i>
+                    <i class="fa-solid fa-circle-half-stroke"><h1>Mode</h1></i>
+                </div>
+
+                <div class="feed">
+                        
+                </div>
+
+            </section>
+
+            <section class="library">
+                <div class="bookshelf">
+                    <div class="shelf shelf-1">
+                        <div class="placeholder" data-index="1">+</div>
+                        <div class="placeholder" data-index="2">+</div>
+                        <div class="placeholder" data-index="3">+</div>
+                        <div class="placeholder" data-index="4">+</div>
+                        <div class="placeholder" data-index="4">+</div>
+                    </div>
+                    <div class="shelf shelf-2">
+                        <div class="placeholder" data-index="5">+</div>
+                        <div class="placeholder" data-index="6">+</div>
+                        <div class="placeholder" data-index="7">+</div>
+                        <div class="placeholder" data-index="8">+</div>
+                        <div class="placeholder" data-index="4">+</div>
+                    </div>
+                    <div class="shelf shelf-3">
+                        <div class="placeholder" data-index="9">+</div>
+                        <div class="placeholder" data-index="10">+</div>
+                        <div class="placeholder" data-index="11">+</div>
+                        <div class="placeholder" data-index="12">+</div>
+                        <div class="placeholder" data-index="4">+</div>
+                    </div>
+                    <div class="shelf shelf-4">
+                        <div class="placeholder" data-index="13">+</div>
+                        <div class="placeholder" data-index="14">+</div>
+                        <div class="placeholder" data-index="15">+</div>
+                        <div class="placeholder" data-index="16">+</div>
+                        <div class="placeholder" data-index="4">+</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal Structure -->
+<div class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Book Index</h2>
+
+                <!-- Color Options -->
+                <div class="color-set primary-colors">
+                    <h3>Primary Colors</h3>
+                    <div class="color-row">
+                        <button class="color-button" data-color="#ff0000" style="background-color: #ff0000;"></button>
+                        <button class="color-button" data-color="#00ff00" style="background-color: #00ff00;"></button>
+                        <button class="color-button" data-color="#0000ff" style="background-color: #0000ff;"></button>
+                        <button class="color-button" data-color="#ffff00" style="background-color: #ffff00;"></button>
+                        <button class="color-button" data-color="#ff00ff" style="background-color: #ff00ff;"></button>
+                    </div>
+                    <div class="color-row">
+                        <button class="color-button" data-color="#00ffff" style="background-color: #00ffff;"></button>
+                        <button class="color-button" data-color="#000000" style="background-color: #000000;"></button>
+                        <button class="color-button" data-color="#ffffff" style="background-color: #ffffff;"></button>
+                        <button class="color-button" data-color="#808080" style="background-color: #808080;"></button>
+                        <button class="color-button" data-color="#800000" style="background-color: #800000;"></button>
+                    </div>
+                </div>
+                
+                <div class="color-set secondary-colors">
+                    <h3>Secondary Colors</h3>
+                    <div class="color-row">
+                        <button class="color-button" data-color="#ff0000" style="background-color: #ff0000;"></button>
+                        <button class="color-button" data-color="#00ff00" style="background-color: #00ff00;"></button>
+                        <button class="color-button" data-color="#0000ff" style="background-color: #0000ff;"></button>
+                        <button class="color-button" data-color="#ffff00" style="background-color: #ffff00;"></button>
+                        <button class="color-button" data-color="#ff00ff" style="background-color: #ff00ff;"></button>
+                    </div>
+                    <div class="color-row">
+                        <button class="color-button" data-color="#00ffff" style="background-color: #00ffff;"></button>
+                        <button class="color-button" data-color="#000000" style="background-color: #000000;"></button>
+                        <button class="color-button" data-color="#ffffff" style="background-color: #ffffff;"></button>
+                        <button class="color-button" data-color="#808080" style="background-color: #808080;"></button>
+                        <button class="color-button" data-color="#800000" style="background-color: #800000;"></button>
+                    </div>
+                </div>
+                
+
+        <div class="subject-container">
+            <div class="subject-list">
+                <ul>
+                    <li class="subject" data-subject="Mathematics">To Do</li>
+                    <li class="subject" data-subject="Physics">Zen Notes</li>
+                    <li class="subject" data-subject="Biology">Sticky Notes</li>
+                    <li class="subject" data-subject="Chemistry">Cards</li>
+                    <li class="subject" data-subject="Computers">Routines</li>
+                    <li class="subject" data-subject="History">Planner</li>
+                    <li class="subject" data-subject="Literature">Habit Flow</li>
+                </ul>
+            </div>
+            <div class="subject-list">
+                <ul>
+                    <li class="subject" data-subject="Mathematics">Mathematics</li>
+                    <li class="subject" data-subject="Physics">Physics</li>
+                    <li class="subject" data-subject="Chemistry">Chemistry</li>
+                    <li class="subject" data-subject="Biology">Biology</li>
+                    <li class="subject" data-subject="Computers">Computers</li>
+                    <li class="subject" data-subject="History">History</li>
+                    <li class="subject" data-subject="Literature">Literature</li>
+                    <li class="subject" data-subject="Philosophy">Philosophy</li>
+                    <li class="subject" data-subject="Psychology">Psychology</li>
+                </ul>
+            </div>
+            <div class="subject-list">
+                <ul>
+                    <li class="subject" data-subject="Geography">Geography</li>
+                    <li class="subject" data-subject="Politics">Politics</li>
+                    <li class="subject" data-subject="Sociology">Sociology</li>
+                    <li class="subject" data-subject="Economics">Economics</li>
+                    <li class="subject" data-subject="Law">Law</li>
+                    <li class="subject" data-subject="Health">Health</li>
+                    <li class="subject" data-subject="Art">Art</li>
+                    <li class="subject" data-subject="Music">Music</li>
+                    <li class="subject" data-subject="News">News</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>
